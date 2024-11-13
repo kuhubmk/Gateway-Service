@@ -1,0 +1,132 @@
+{
+  "basic_user_policy": {
+    "rate": 5,
+    "per": 60,
+    "quota_max": -1,
+    "quota_renewal_rate": 3600,
+    "access_rights": {
+      "speech_to_text_api": {
+        "api_name": "Speech to Text API",
+        "api_id": "xxx",
+        "versions": ["Default"],
+        "allowed_urls": [
+          {
+            "url": "/api/speech-to-text",
+            "methods": ["POST"],
+            "custom_conditions": {
+              "max_audio_length": 300,
+              "daily_limit": 3
+            }
+          }
+        ]
+      },
+      "text_process_api": {
+        "api_name": "Text Process API",
+        "api_id": "xxx",
+        "versions": ["Default"],
+        "allowed_urls": [
+          {
+            "url": "/api/text-process",
+            "methods": ["POST"],
+            "custom_conditions": {
+              "daily_limit": 1000
+            }
+          }
+        ]
+      },
+      "text_to_speech_api": {
+        "api_name": "Text to Speech API",
+        "api_id": "xxx",
+        "versions": ["Default"],
+        "allowed_urls": [
+          {
+            "url": "/api/text-to-speech",
+            "methods": ["POST"],
+            "custom_conditions": {
+              "daily_limit": 10
+            }
+          }
+        ]
+      },
+      "image_generate_api": {
+        "api_name": "Image Generate API",
+        "api_id": "xxx",
+        "versions": ["Default"],
+        "allowed_urls": [
+          {
+            "url": "/api/image-generate",
+            "methods": ["POST"],
+            "custom_conditions": {
+              "daily_limit": 5
+            }
+          }
+        ]
+      }
+    }
+  },
+  "premium_user_policy": {
+    "rate": 10,
+    "per": 60,
+    "quota_max": -1,
+    "quota_renewal_rate": 3600,
+    "access_rights": {
+      "speech_to_text_api": {
+        "api_name": "Speech to Text API",
+        "api_id": "xxx",
+        "versions": ["Default"],
+        "allowed_urls": [
+          {
+            "url": "/api/speech-to-text",
+            "methods": ["POST"],
+            "custom_conditions": {
+              "max_audio_length": 1200,
+              "daily_limit": 10
+            }
+          }
+        ]
+      },
+      "text_process_api": {
+        "api_name": "Text Process API",
+        "api_id": "xxx",
+        "versions": ["Default"],
+        "allowed_urls": [
+          {
+            "url": "/api/text-process",
+            "methods": ["POST"],
+            "custom_conditions": {
+              "daily_limit": 10000
+            }
+          }
+        ]
+      },
+      "text_to_speech_api": {
+        "api_name": "Text to Speech API",
+        "api_id": "xxx",
+        "versions": ["Default"],
+        "allowed_urls": [
+          {
+            "url": "/api/text-to-speech",
+            "methods": ["POST"],
+            "custom_conditions": {
+              "daily_limit": 100
+            }
+          }
+        ]
+      },
+      "image_generate_api": {
+        "api_name": "Image Generate API",
+        "api_id": "xxx",
+        "versions": ["Default"],
+        "allowed_urls": [
+          {
+            "url": "/api/image-generate",
+            "methods": ["POST"],
+            "custom_conditions": {
+              "daily_limit": 50
+            }
+          }
+        ]
+      }
+    }
+  }
+} 
